@@ -97,10 +97,14 @@ public class ContactBook {
     Novos
      */
     public Contact getContact(int number) {
-        if (isEmpty() )
+        if (isEmpty())
+            return null;
+        String name = getName(number);
+        int index = searchIndex(name);
+        if (index == -1)
             return null;
         else
-            return contacts[searchIndex(getName(number))];
+            return contacts[index];
     }
 
     /*
