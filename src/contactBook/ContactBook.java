@@ -118,10 +118,9 @@ public class ContactBook {
        return null;
     }
     public boolean ep(){
-        if (counter == 0 || counter == 1) return false;
-        for(int i = 0; i<contacts.length; i++ ){
+        for(int i = 0; i<counter -1; i++ ){
             int number = contacts[i].getPhone();
-        for (int j=i+1; j< contacts.length - 1; j++){
+        for (int j=i+1; j< counter; j++){
             if (number == contacts[j].getPhone())
                 return true;
         }
