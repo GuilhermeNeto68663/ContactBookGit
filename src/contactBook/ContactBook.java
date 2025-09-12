@@ -97,7 +97,10 @@ public class ContactBook {
     Novos
      */
     public Contact getContact(int number) {
-        return contacts[searchIndex(getName(number))];
+        if (isEmpty() )
+            return null;
+        else
+            return contacts[searchIndex(getName(number))];
     }
 
     /*
@@ -111,14 +114,17 @@ public class ContactBook {
        return null;
     }
     public boolean ep(){
-        int length = contacts.length;
-        for(int i = 0; i<length; i++ ){
+        if (counter == 0 || counter == 1) return false;
+        for(int i = 0; i<contacts.length; i++ ){
             int number = contacts[i].getPhone();
-        for (int j=i+1; j< length; j++){
-            if (number== contacts[i].getPhone())
+        for (int j=i+1; j< contacts.length - 1; j++){
+            if (number == contacts[j].getPhone())
                 return true;
         }
     }
         return false;
+    }
+    public boolean isEmpty(){
+        return counter == 0;
     }
 }
