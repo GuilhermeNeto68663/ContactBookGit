@@ -93,4 +93,21 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    /*
+    Novos
+     */
+    public Contact getContact(int number) {
+        return contacts[searchIndex(getName(number))];
+    }
+
+    /*
+    Novos
+     */
+    private String getName(int number) {
+       for(int i = 0; i < counter; i++) {
+           if(contacts[i].getPhone()==number)
+               return contacts[i].getName();
+       }
+       return null;
+    }
 }
