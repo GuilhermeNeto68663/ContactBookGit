@@ -172,7 +172,6 @@ public class Main {
             System.out.println(CONTACT_NOT_EXIST);
         }
         else if(cBook.getContact(phone) != null) {
-            System.out.println(phone);
             System.out.println(cBook.getContact(phone).getName());
         }
         else
