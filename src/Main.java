@@ -171,8 +171,8 @@ public class Main {
         if(cBook.isEmpty()) {
             System.out.println(CONTACT_NOT_EXIST);
         }
-        else if(cBook.getContact(phone) != null) {
-            System.out.println(cBook.getContact(phone).getName());
+        else if(cBook.getName(phone) != null) {
+            System.out.println(cBook.getName(phone));
         }
         else
             System.out.println(CONTACT_NOT_EXIST);

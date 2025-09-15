@@ -93,30 +93,14 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
-    /*
-    Novos
-     */
-    public Contact getContact(int number) {
-        if (isEmpty())
-            return null;
-        String name = getName(number);
-        int index = searchIndex(name);
-        if (index == -1)
-            return null;
-        else
-            return contacts[index];
-    }
-
-    /*
-    Novos
-     */
-    private String getName(int number) {
+    public String getName(int number) {
        for(int i = 0; i < counter; i++) {
            if(contacts[i].getPhone()==number)
                return contacts[i].getName();
        }
        return null;
     }
+
     public boolean ep(){
         for(int i = 0; i<counter -1; i++ ){
             int number = contacts[i].getPhone();
